@@ -11,8 +11,8 @@ echo 4. Iniciar la aplicación en producción (npm run start:prod)
 echo 5. Ejecutar tests unitarios (npm run test)
 echo 6. Ejecutar tests e2e (npm run test:e2e)
 echo 7. Ver la cobertura de tests (npm run test:cov)
-echo 8. Ejecutar eslint (npx eslint .)
-echo 9. Ejecutar eslint con corrección automática (npx eslint . --fix)
+echo 8. Ejecutar eslint (npm run lint)
+echo 9. Ejecutar eslint con corrección automática (npm run format)
 echo 10. Salir
 echo =========================
 set /p opcion="Selecciona una opción: "
@@ -25,7 +25,7 @@ if "%opcion%"=="5" goto ejecutar_tests
 if "%opcion%"=="6" goto ejecutar_tests_e2e
 if "%opcion%"=="7" goto ver_cobertura
 if "%opcion%"=="8" goto ejecutar_eslint
-if "%opcion%"=="9" goto ejecutar_eslint_fix
+if "%opcion%"=="9" goto ejecutar_eslint_format
 if "%opcion%"=="10" goto salir
 
 echo Opción no válida. Por favor, elige una opción del 1 al 10.
@@ -76,13 +76,13 @@ goto menu
 
 :ejecutar_eslint
 echo Ejecutando eslint...
-npx eslint .
+npm run lint
 pause
 goto menu
 
-:ejecutar_eslint_fix
+:ejecutar_eslint_format
 echo Ejecutando eslint con corrección automática...
-npx eslint . --fix
+npm run format
 pause
 goto menu
 

@@ -55,3 +55,14 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+# RECOMMENDS - GOOD PRACTICE - RULES
+
+- text in postgres only use data type "text" y "character varying(n)" (up better in future)
+
+## variable nomenclature
+
+- conlum name snake_cade
+- table name pluralname
+- primary-key for ever id
+- foreying-key tablesingular_id

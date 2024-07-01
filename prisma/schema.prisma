@@ -32,3 +32,6 @@ model Post {
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// Cada vez que realices cambios en tu archivo schema.prisma, como agregar nuevos modelos o campos,
+// debes ejecutar "npx prisma generate" para actualizar el cliente con las nuevas definiciones.
